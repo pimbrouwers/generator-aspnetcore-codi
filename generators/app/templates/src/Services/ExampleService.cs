@@ -1,6 +1,6 @@
 using System;
 
-namespace AspNetCoreCodi.Services {
+namespace <%= appName %>.Services {
     public interface IExampleService {
         void DoSomeWork();
     }

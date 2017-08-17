@@ -1,4 +1,4 @@
-using AspNetCoreCodi.Services;
+using <%= appName %>.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -6,7 +6,7 @@ using System;
 using System.IO;
 
 
-namespace AspNetCoreCodi
+namespace <%= appName %>
 {    
     public class AppSettings
     {

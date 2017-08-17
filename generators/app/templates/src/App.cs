@@ -1,6 +1,6 @@
-using AspNetCoreCodi.Services;
+using <%= appName %>.Services;
 
-namespace AspNetCoreCodi
+namespace <%= appName %>
 {
     
     public class App
