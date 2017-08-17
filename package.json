@@ -1,0 +1,24 @@
+{
+  "name": "generator-aspnetcore-codi",
+  "version": "1.0.0",
+  "description": "Yeoman Generator for an .NET Core DI-ready Console Application",
+  "files": [
+    "generators"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pimbrouwers/generator-aspnetcore-codi.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^1.1.1"
+  },
+  "author": "Pim Brouwers <pimnation@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pimbrouwers/generator-aspnetcore-codi/issues"
+  },
+  "homepage": "https://github.com/pimbrouwers/generator-aspnetcore-codi#readme"
+}
