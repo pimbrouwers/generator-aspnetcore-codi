@@ -27,13 +27,7 @@ namespace <%= appName %>
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
             //run app            
-            if(args.Length > 0)
-            {
-                string syncType = args[0].ToUpper();
-                string syncSchedule = args[1].ToUpper();
-
-                serviceProvider.GetService<App>().Run();
-            }            
+            serviceProvider.GetService<App>().Run();           
         }
         
         private static void ConfigureServices(IServiceCollection serviceCollection)
