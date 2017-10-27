@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using <%= appName %>.Services;
 using System.IO;
 
@@ -31,7 +32,7 @@ namespace <%= appName %>
         {            
             // build configuration
             var configuration = new ConfigurationBuilder()
-                                    .SetBasePath(Directory.GetCurrentDirectory())
+                                    .SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location))
                                     .AddJsonFile("appsettings.json", false)
                                     .Build();
             
