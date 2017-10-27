@@ -1,6 +1,6 @@
 {
   "name": "generator-aspnetcore-codi",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Yeoman Generator for an .NET Core DI-ready Console Application",
   "files": [
     "generators"
