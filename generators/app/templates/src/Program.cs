@@ -19,17 +19,17 @@ namespace <%= appName %>
         static void Main(string[] args)
         {
             //create service collection
-            var services = new ServiceCollection();
-            ConfigureServices(services);
+            var serviceCollection = new ServiceCollection();
+            ConfigureServices(serviceCollection);
 
             // create service provider
-            var serviceProvider = services.BuildServiceProvider();
+            var serviceProvider = serviceCollection.BuildServiceProvider();
 
             //run app            
             serviceProvider.GetService<App>().Run();           
         }
         
-        private static void ConfigureServices(IServiceCollection services)
+        private static void ConfigureServices(IServiceCollection serviceCollection)
         {            
             // build configuration
             var configuration = new ConfigurationBuilder()
@@ -38,14 +38,14 @@ namespace <%= appName %>
                                     .Build();
             
             //specify the instances of configuration
-            services.AddOptions();            
-            services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
+            serviceCollection.AddOptions();            
+            serviceCollection.Configure<AppSettings>(configuration.GetSection("AppSettings"));
 
-            // add services
-            services.AddTransient<IExampleService, ExampleService>();
+            // add serviceCollection
+            serviceCollection.AddTransient<IExampleService, ExampleService>();
             
             // add app stub
-            services.AddTransient<App>();
+            serviceCollection.AddTransient<App>();
         }
     }
 }
